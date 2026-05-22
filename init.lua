@@ -50,6 +50,13 @@ require("lazy").setup({
           ["<space>"] = "none",
         },
       },
+      buffers = {
+        window = {
+          mappings = {
+            ["x"] = "buffer_delete",
+          },
+        },
+      },
     },
   },
   {
@@ -63,6 +70,9 @@ vim.keymap.set("n", "<leader>g", "<cmd>Neotree toggle git_status float<cr>", { d
 vim.keymap.set("n", "<leader>b", "<cmd>Neotree toggle buffers right<cr>", { desc = "Buffers (Neo-tree)" })
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "Git Diff View" })
 vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>", { desc = "Close Git Diff View" })
+vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Close Current Buffer" })
+vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>", { desc = "Close Current Window" })
+vim.keymap.set("n", "<leader>1", "<cmd>only<cr>", { desc = "Keep Only Current Window" })
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
