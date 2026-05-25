@@ -106,6 +106,35 @@ Use a specific Neovim path:
 .\scripts\install-neovim-context-menu.ps1 -NvimExe "C:\Program Files\Neovim\bin\nvim.exe"
 ```
 
+## macOS Finder Context Menu (Optional)
+
+On macOS, the Finder equivalent is a Quick Action created in Automator.
+
+1. Open `Automator`.
+2. Choose `New Document` -> `Quick Action`.
+3. Set `Workflow receives current` to `files or folders`.
+4. Set `in` to `Finder`.
+5. Add `Run AppleScript`.
+6. Paste:
+
+```applescript
+on run {input, parameters}
+	tell application "Terminal"
+		activate
+		repeat with i in input
+			set p to POSIX path of i
+			do script "nvim " & quoted form of p
+		end repeat
+	end tell
+	return input
+end run
+```
+
+7. Save as `Open with Neovim`.
+8. In Finder, right-click a file or folder and run `Quick Actions` -> `Open with Neovim`.
+
+Note: Finder usually only shows this on selected files/folders, not when right-clicking empty folder background.
+
 ## Default Behavior
 
 On startup, Neovim opens:
