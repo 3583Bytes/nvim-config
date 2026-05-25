@@ -19,6 +19,7 @@ Core workflow:
 
 - `init.lua` - main Neovim configuration
 - `lazy-lock.json` - pinned plugin versions for reproducible installs
+- `scripts/install-neovim-context-menu.ps1` - installs/removes Windows Explorer context menu entries for Neovim
 
 ## Windows Install
 
@@ -81,6 +82,28 @@ nvim
 
 ```vim
 :Lazy sync
+```
+
+## Windows Context Menu (Optional)
+
+This repo includes a script to add right-click options for opening files/folders in Neovim from Windows Explorer.
+
+Install entries:
+
+```powershell
+.\scripts\install-neovim-context-menu.ps1
+```
+
+Remove entries:
+
+```powershell
+.\scripts\install-neovim-context-menu.ps1 -Uninstall
+```
+
+Use a specific Neovim path:
+
+```powershell
+.\scripts\install-neovim-context-menu.ps1 -NvimExe "C:\Program Files\Neovim\bin\nvim.exe"
 ```
 
 ## Default Behavior
