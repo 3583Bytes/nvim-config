@@ -101,6 +101,21 @@ On startup, Neovim opens:
 - `<Space>q` - close current window
 - `<Space>1` - keep only current window (`:only`)
 
+## Quitting Neovim
+
+When multiple windows or tabs are open, `:q` only closes the current window.
+
+- `:qa` or `:qall` - quit all windows and tabs
+- `:qa!` or `:qall!` - force quit all (discard unsaved changes)
+- `:wqa` - save all, then quit all
+
+Optional mappings:
+
+```vim
+nnoremap <leader>q :qa<CR>
+nnoremap <leader>Q :qa!<CR>
+```
+
 ## Neo-tree Buffers Actions
 
 - `x` - delete selected buffer in the Neo-tree Buffers panel
