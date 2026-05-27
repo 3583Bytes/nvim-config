@@ -1,4 +1,4 @@
-# 3583Bytes Neovim Config
+# 3583 Bytes Neovim Config
 
 Neovim configuration for **3583Bytes**.
 
@@ -7,7 +7,7 @@ Neovim configuration for **3583Bytes**.
 
 ## Overview
 
-At 3583Bytes, we build games with a practical engineering mindset: keep tools lean, keep iteration fast, and ship consistently. This Neovim configuration reflects that approach, combining a clean editor experience with strong project navigation and Git workflows to support day-to-day production.
+At 3583 Bytes, we build games with a practical engineering mindset: keep tools lean, keep iteration fast, and ship consistently. This Neovim configuration reflects that approach, combining a clean editor experience with strong project navigation and Git workflows to support day-to-day production.
 
 Core workflow:
 
